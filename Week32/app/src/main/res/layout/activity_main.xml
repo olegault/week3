@@ -7,6 +7,7 @@
     tools:context=".MainActivity">
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -17,10 +18,11 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/passwordInput"
-            android:layout_width="match_parent"
+            android:layout_width="396dp"
             android:layout_height="wrap_content"
-            android:hint="Password"
-            android:inputType="textPassword" />
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            tools:ignore="TextContrastCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -35,9 +37,10 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/userNameInput"
-            android:layout_width="match_parent"
+            android:layout_width="399dp"
             android:layout_height="wrap_content"
-            android:hint="Username" />
+            android:hint="@string/username"
+            tools:ignore="TextContrastCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -45,11 +48,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="42dp"
-        android:text="Please enter your username and password"
+        android:text="@string/instructionText"
         android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="114dp"
+        android:layout_marginBottom="180dp"
+        android:text="@string/login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
